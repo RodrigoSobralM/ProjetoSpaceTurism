@@ -1,0 +1,8 @@
+@use "../../Sass/variables" as *;
+
+body {
+    background-image: url("/imgsHome/backgroundHome.svg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
