@@ -1,8 +1,71 @@
 @use "../../Sass/variables" as *;
 
-body {
-    background-image: url("/imgsHome/backgroundHome.svg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.home {
+  background-image: url("/imgsHome/backgroundHome.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  &__content {
+    margin-top: 251px;
+    display: flex;
+    justify-content: space-around;
+    .textInformation {
+      display: flex;
+      flex-direction: column;
+
+      width: 450px;
+      gap: 24px;
+      h2 {
+        margin: 0;
+        color: #d0d6f9;
+        font-family: $font-barlow-condensed;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 4.725px;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: $font-bellfair;
+        color: white;
+        font-size: 150px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      h3 {
+        margin: 0;
+        font-family: $font-barlow;
+        color: #d0d6f9;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+      }
+    }
+
+    button {
+      margin-top: 108px;
+      width: 274px;
+      height: 274px;
+      border-radius: 274px;
+      background: #fff;
+      color: #0b0d17;
+      font-family: $font-bellfair;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 0px 80px rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease-in-out;
+        border: none;
+      }
+    }
   }
+}

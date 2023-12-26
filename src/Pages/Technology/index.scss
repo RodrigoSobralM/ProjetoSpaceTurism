@@ -1,0 +1,8 @@
+@use "../../Sass/variables" as *;
+
+.technology {
+  background-image: url("/imgsTechnology/backgroundTechnology.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

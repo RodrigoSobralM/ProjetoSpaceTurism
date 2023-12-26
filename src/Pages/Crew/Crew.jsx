@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-
+import "./index.scss"
 const Crew = () => {
   return (
-    <div>
+    <div className='crew'>
       <Header />
     </div>
   )
