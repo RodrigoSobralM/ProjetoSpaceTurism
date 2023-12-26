@@ -1,8 +1,130 @@
 @use "../../Sass/variables" as *;
 
-body {
-    background-image: url("/imgsHome/backgroundHome.svg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.destination {
+  color: white;
+  background-image: url("/imgsDestination/backgroundDestination.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  &__content {
+    margin-top: 76px;
   }
+
+  .title {
+    margin-left: 166.5px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    color: #fff;
+    font-family: $font-barlow-condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 400;
+    }
+    span {
+      font-size: 28px;
+      font-weight: 700;
+      opacity: 0.25;
+    }
+  }
+
+  &__content-planets {
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .lis-content {
+      width: 445px;
+      height: 472px;
+      display: flex;
+      flex-direction: column;
+      gap: 37px;
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+        li {
+          color: #d0d6f9;
+          font-family: $font-barlow-condensed;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 2.7px;
+          padding-bottom: 12px;
+          cursor: pointer;
+          &:hover {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+          }
+          &.active {
+            border-bottom: 2px solid white;
+          }
+        }
+      }
+
+      &__planetsInfo {
+        display: flex;
+        flex-direction: column;
+        .line {
+          margin: 54px 0 28px 0;
+        }
+        h1 {
+          color: #fff;
+          font-family: $font-bellfair;
+          font-size: 100px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        h3 {
+          margin: 0;
+          color: #d0d6f9;
+          font-family: $font-barlow;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+        }
+      }
+
+      &__travelInfo {
+        display: flex;
+        gap: 68px;
+
+        .distanceTimeInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          p:nth-child(1) {
+            color: #d0d6f9;
+            font-family: $font-barlow-condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2.362px;
+            text-transform: uppercase;
+          }
+
+          p:nth-child(2) {
+            color: #fff;
+            font-family: $font-bellfair;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
