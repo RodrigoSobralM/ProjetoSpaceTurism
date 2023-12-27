@@ -38,7 +38,17 @@ const Crew = ({ data }) => {
           <img
             src={selectedData && selectedData.imgPath}
             alt=""
-            className={activeIndex === 3 ? "special-image" : ""}
+            className={
+              activeIndex === 0
+                ? "image-0"
+                : activeIndex === 1
+                ? "image-1"
+                : activeIndex === 2
+                ? "image-2"
+                : activeIndex === 3
+                ? "special-image"
+                : ""
+            }
           />
         </div>
       </div>
