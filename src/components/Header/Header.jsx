@@ -22,10 +22,10 @@ const Header = () => {
   return (
     <div className="ComponentHeader">
       <header className="ComponentHeader__header">
-        <img src="/imgsCompenentHeader/logoHeader.svg" alt="" />
+        <img src="/imgsComponentHeader/logoHeader.svg" alt="" />
 
         <div className="ComponentHeader__lis">
-          <img src="/imgsCompenentHeader/line.svg" alt="" />
+          <img src="/imgsComponentHeader/line.svg" alt="" />
           <ul>
             <Link to={"/"}>
               <li
