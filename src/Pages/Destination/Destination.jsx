@@ -18,39 +18,28 @@ const Destination = ({ data }) => {
           <h1>PICK YOUR DESTINATION</h1>
         </div>
         <div className="destination__content-planets">
-          <img src={selectedData && selectedData.imgPath} alt="" />
+          <img
+            src={selectedData && selectedData.imgPath}
+            alt=""
+            className={activeIndex === 2 ? "special-image" : ""}
+          />
           <div className="lis-content">
             <ul>
-              <li
-                className={activeIndex === 0 ? "active" : ""}
-                onClick={() => setActiveIndex(0)}
-              >
-                MOON
-              </li>
-              <li
-                className={activeIndex === 1 ? "active" : ""}
-                onClick={() => setActiveIndex(1)}
-              >
-                MARS
-              </li>
-              <li
-                className={activeIndex === 2 ? "active" : ""}
-                onClick={() => setActiveIndex(2)}
-              >
-                EUROPA
-              </li>
-              <li
-                className={activeIndex === 3 ? "active" : ""}
-                onClick={() => setActiveIndex(3)}
-              >
-                TITAN
-              </li>
+              {[0, 1, 2, 3].map((index) => (
+                <li
+                  key={index}
+                  className={activeIndex === index ? "active" : ""}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  {data[index].title}
+                </li>
+              ))}
             </ul>
             {selectedData && (
               <div className="lis-content__planetsInfo">
                 <h1>{selectedData.title}</h1>
                 <h3>{selectedData.description}</h3>
-                  <img className="line" src={"/imgsDestination/line.svg"} alt="" />
+                <img className="line" src={"/imgsDestination/line.svg"} alt="" />
 
                 <div className="lis-content__travelInfo">
                   <div className="distanceTimeInfo">

@@ -7,6 +7,7 @@ import Destination from "./Pages/Destination/Destination";
 import Crew from "./Pages/Crew/Crew";
 import Technology from "./Pages/Technology/Technology";
 import { PLANETS_MOCK } from "./mock/planetsInformation";
+import { PEOPLE_MOCK } from "./mock/peoplesInfo";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/crew",
-    element: <Crew />,
+    element: <Crew data={PEOPLE_MOCK}/>,
   },
   {
     path: "/technology",
