@@ -46,7 +46,7 @@ const Crew = ({ data }) => {
                 : activeIndex === 2
                 ? "image-2"
                 : activeIndex === 3
-                ? "special-image"
+                ? "image-4"
                 : ""
             }
           />
